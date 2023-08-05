@@ -1,9 +1,9 @@
 # Dictionary untuk menyimpan data item
 data_item = {
-    "A001": {"Nama Item": "Pensil", "Harga": 2000, "Stock": 50},
-    "A002": {"Nama Item": "Buku Tulis", "Harga": 5000, "Stock": 30},
-    "A003": {"Nama Item": "Bolpoin", "Harga": 3000, "Stock": 40},
-    "A004": {"Nama Item": "Penggaris", "Harga": 1500, "Stock": 20},
+    "A001": {"Nama": "Air Mineral", "Harga": 5000, "Stock": 50},
+    "A002": {"Nama": "Keripik Kentang", "Harga": 10000, "Stock": 30},
+    "A003": {"Nama": "Roti Sobek", "Harga": 15000, "Stock": 40},
+    "A004": {"Nama": "Kopi Botol", "Harga": 8000, "Stock": 20},
 }
 
 # Fungsi untuk melihat stock item
@@ -11,7 +11,7 @@ def lihat_stock():
     print("===== Stock Item Minimarket =====")
     print("{:<10} {:<15} {:<10} {:<10}".format("Kode Item", "Nama Item", "Harga", "Stock"))
     for kode, item in data_item.items():
-        print("{:<10} {:<15} {:<10} {:<10}".format(kode, item["Nama Item"], item["Harga"], item["Stock"]))
+        print("{:<10} {:<15} {:<10} {:<10}".format(kode, item["Nama"], item["Harga"], item["Stock"]))
 
 # Fungsi untuk menambah stock item
 def tambah_stock():
@@ -24,7 +24,7 @@ def tambah_stock():
     kode_item = "A" + str(len(data_item) + 1).zfill(3)
 
     data_item[kode_item] = {
-        "Nama Item": nama_item,
+        "Nama": nama_item,
         "Harga": harga,
         "Stock": stock
     }
